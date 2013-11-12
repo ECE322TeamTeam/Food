@@ -117,10 +117,10 @@ public class ActivityManageIngredient extends Activity {
 			return;
 		}
 		
-		Double quantity_num;
+		Integer quantity_num;
 		Boolean invalid_ingredient = false;
 		try {
-			quantity_num = Double.parseDouble(quantityIngredient);
+			quantity_num = Integer.parseInt(quantityIngredient);
 			if (quantity_num < 0) {
 				invalid_ingredient = true;
 			}
