@@ -90,6 +90,7 @@
         android:text="@string/RemoveIngredient" />
 
     <Button
+        android:id="@+id/update_ingredient"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="updateIngredient"

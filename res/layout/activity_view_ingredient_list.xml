@@ -22,6 +22,7 @@
         android:gravity="center" >
 
         <Button
+            android:id="@+id/addIngredient"
             style="@style/GreenButton"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
