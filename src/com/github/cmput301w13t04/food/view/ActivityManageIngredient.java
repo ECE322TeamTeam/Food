@@ -116,6 +116,25 @@ public class ActivityManageIngredient extends Activity {
 					Toast.LENGTH_SHORT).show();
 			return;
 		}
+		
+		Double quantity_num;
+		Boolean invalid_ingredient = false;
+		try {
+			quantity_num = Double.parseDouble(quantityIngredient);
+			if (quantity_num < 0) {
+				invalid_ingredient = true;
+			}
+		} catch (Exception e) {
+			invalid_ingredient = true;
+		}
+		
+		if (invalid_ingredient) {
+			Toast.makeText(view.getContext(), "Invalid Ingredient Quantity!",
+					Toast.LENGTH_SHORT).show();
+			quantity.setText("0");
+			return;
+		}
+		
 		ingredient.setQuantity(quantityIngredient);
 
 		// Get Description
@@ -151,7 +170,7 @@ public class ActivityManageIngredient extends Activity {
 
 		finish();
 	}
-
+	
 	/**
 	 * The button listener for starting the photo-taking intent
 	 */
