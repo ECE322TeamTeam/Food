@@ -34,7 +34,7 @@ public class ActivityViewRecipeListDatabase extends Activity {
 		setupActionBar();
 
 		ArrayList<Recipe> recipes = null;
-
+		
 		// Handle query by Username
 		Database database = new Database();
 		String username = getIntent().getStringExtra("USER");
@@ -46,6 +46,10 @@ public class ActivityViewRecipeListDatabase extends Activity {
 				.getParcelableArrayListExtra("INGREDIENTS");
 		if(ingredients != null) {
 			recipes = database.searchByIngredients(ingredients);
+		}
+		
+		if (recipes == null) {
+			recipes = new ArrayList<Recipe>();
 		}
 
 		// Populate Recipe List
