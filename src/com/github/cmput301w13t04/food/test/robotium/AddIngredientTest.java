@@ -20,13 +20,14 @@ public class AddIngredientTest  extends ActivityInstrumentationTestCase2<Activit
 		solo = new Solo(getInstrumentation(), getActivity());
 	}
 
+	
 	public void testDisplayWhiteBox() throws InterruptedException {
 		solo.clickOnView(solo.getView(R.id.viewPantry));
 		solo.clickOnView(solo.getView(R.id.addIngredient));
 		
 		EditText name = (EditText) solo.getView(R.id.add_name);
 		solo.clearEditText(name);
-		solo.enterText(name, "Sugar6");
+		solo.enterText(name, "Ice cream");
 		
 		EditText quantity = (EditText) solo.getView(R.id.add_quantity);
 		solo.clearEditText(quantity);
@@ -36,9 +37,10 @@ public class AddIngredientTest  extends ActivityInstrumentationTestCase2<Activit
 		
 		//Check the toast
 		assertTrue(solo.waitForText("Added"));
+		assertTrue(solo.waitForText("Ice cream"));
 		
 		//Sleep so the app has time to save before it kills the app
-		solo.sleep(5000);
+		solo.sleep(10000);
 	}
 	
 	@Override

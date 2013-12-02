@@ -13,6 +13,7 @@
     <Button
         android:id="@+id/viewRecipe"
         style="@style/MainButton"
+        android:id="@+id/viewRecipe"
         android:layout_width="match_parent"
         android:layout_height="140dp"
         android:drawableLeft="@drawable/book"
