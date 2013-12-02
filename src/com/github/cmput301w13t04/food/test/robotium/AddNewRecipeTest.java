@@ -23,7 +23,9 @@ public class AddNewRecipeTest extends ActivityInstrumentationTestCase2<ActivityM
 
 	public void testAddRecipe() throws InterruptedException {
 		solo.clickOnView(solo.getView(R.id.viewRecipe));
+		solo.sleep(10000);
 		solo.clickOnText("Add Recipe");
+		solo.sleep(10000);
 		solo.clickOnText("DESCRIPTION");
 		
 		enterText(R.id.recipe_name, "Recipe 1");
@@ -31,6 +33,7 @@ public class AddNewRecipeTest extends ActivityInstrumentationTestCase2<ActivityM
 		enterText(R.id.recipe_time, "15");
 		
 		solo.clickOnText("INGREDIENTS");
+		solo.sleep(10000);
 		solo.clickOnText("Add Ingredient");
 		enterText(R.id.add_name, "Ingredient 1");
 		enterText(R.id.add_quantity, "5");
@@ -38,13 +41,17 @@ public class AddNewRecipeTest extends ActivityInstrumentationTestCase2<ActivityM
 		solo.clickOnText("Update Ingredient");
 		
 		solo.clickOnText("STEPS");
+		solo.sleep(10000);
 		solo.clickOnText("Add Step");
 		enterText(R.id.step_name, "Step 1");
 		enterText(R.id.step_description, "Do something");
 		solo.clickOnText("Update Step");
+	
+		solo.clickOnView(solo.getView(R.id.publish_recipe));
+		assertTrue(solo.searchText("Publish Sucessful!"));
 		
 		solo.clickOnView(solo.getView(R.id.save_recipe));
-		
+		solo.sleep(10000);
 		assertTrue(solo.searchText("Recipe 1"));
 
 	}

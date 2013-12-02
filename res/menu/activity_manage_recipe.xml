@@ -9,6 +9,7 @@
         android:title="Edit Recipe"/>
     <item
         android:enabled="true"
+        android:id="@+id/publish_recipe"
         android:onClick="publishRecipe"
         android:showAsAction="ifRoom"
         android:title="Publish Recipe"/>
