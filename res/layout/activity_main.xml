@@ -11,6 +11,7 @@
     tools:context="com.github.cmput301w13t04.food.view.ActivityMain" >
 
     <Button
+        android:id="@+id/viewRecipe"
         style="@style/MainButton"
         android:layout_width="match_parent"
         android:layout_height="140dp"

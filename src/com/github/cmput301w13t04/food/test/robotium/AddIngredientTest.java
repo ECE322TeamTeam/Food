@@ -1,9 +1,5 @@
 package com.github.cmput301w13t04.food.test.robotium;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
-
 import android.test.ActivityInstrumentationTestCase2;
 import android.widget.EditText;
 
@@ -24,7 +20,6 @@ public class AddIngredientTest  extends ActivityInstrumentationTestCase2<Activit
 		solo = new Solo(getInstrumentation(), getActivity());
 	}
 
-	@Test
 	public void testDisplayWhiteBox() throws InterruptedException {
 		solo.clickOnView(solo.getView(R.id.viewPantry));
 		solo.clickOnView(solo.getView(R.id.addIngredient));
